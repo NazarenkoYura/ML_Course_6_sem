@@ -1,0 +1,125 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Страница — 1" id="QZ9tgdbaB6eDZ0rD1n6I">
+    <mxGraphModel dx="1221" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="53LsgOam5NlkxpQHniR8-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-1" target="53LsgOam5NlkxpQHniR8-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-2" target="53LsgOam5NlkxpQHniR8-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-2" value="Загрузка исходных данных&lt;div&gt;(onilne_shoppers_intention.csv)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="115" y="40" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-4" target="53LsgOam5NlkxpQHniR8-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-4" value="Валидация и первичная очистка" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="324" y="40" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-6" target="53LsgOam5NlkxpQHniR8-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-6" value="Разведочный анализ (EDA)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="40" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-8" target="53LsgOam5NlkxpQHniR8-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-8" value="Предобработка и Feature Engineering" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-10" target="53LsgOam5NlkxpQHniR8-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-10" value="One-Hot кодирование&lt;div&gt;(Month, VisitorType)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="324" y="90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-12" target="53LsgOam5NlkxpQHniR8-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-12" value="Масштабирование разделение (Train 60%, Val 20%, Test 20%)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="115" y="90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-17" target="53LsgOam5NlkxpQHniR8-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="204" y="390" />
+              <mxPoint x="407" y="390" />
+              <mxPoint x="407" y="140" />
+              <mxPoint x="610" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-17" value="Обучение и оптимизация" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="84" y="150" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="53LsgOam5NlkxpQHniR8-17" source="53LsgOam5NlkxpQHniR8-19" target="53LsgOam5NlkxpQHniR8-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-19" value="Инициализация моделей (LogReg, RandomForest, XGBoost, MLP)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="53LsgOam5NlkxpQHniR8-17">
+          <mxGeometry x="10" y="30" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="53LsgOam5NlkxpQHniR8-17" source="53LsgOam5NlkxpQHniR8-20" target="53LsgOam5NlkxpQHniR8-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-20" value="Компенсация дисбаланса классов (class_weight/scale_pos_weight)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="53LsgOam5NlkxpQHniR8-17">
+          <mxGeometry x="10" y="80" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="53LsgOam5NlkxpQHniR8-17" source="53LsgOam5NlkxpQHniR8-26" target="53LsgOam5NlkxpQHniR8-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-26" value="Перебор гиперпараметров (RandomizedSearchCV, 5-fold CV)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="53LsgOam5NlkxpQHniR8-17">
+          <mxGeometry x="10" y="130" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-28" value="Обучение на Train,&amp;nbsp;&lt;div&gt;ранняя остановка на Val&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="53LsgOam5NlkxpQHniR8-17">
+          <mxGeometry x="10" y="180" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-31" target="53LsgOam5NlkxpQHniR8-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-31" value="Оценка и интерпретация" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="160" width="240" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="53LsgOam5NlkxpQHniR8-31" source="53LsgOam5NlkxpQHniR8-33" target="53LsgOam5NlkxpQHniR8-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-33" value="Расчёт метрик на отложенной&amp;nbsp;&lt;div&gt;Test-выборке (ROC-AUC, PR-AUC, F1, Precision, Recall)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="53LsgOam5NlkxpQHniR8-31">
+          <mxGeometry x="10" y="30" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="53LsgOam5NlkxpQHniR8-31" source="53LsgOam5NlkxpQHniR8-35" target="53LsgOam5NlkxpQHniR8-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-35" value="Визуализация ROC-PR кривых и Confusion Matrix" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="53LsgOam5NlkxpQHniR8-31">
+          <mxGeometry x="10" y="100" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-37" value="Глобальная и локальная интерпретация (SHAP TreeExplainer)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="53LsgOam5NlkxpQHniR8-31">
+          <mxGeometry x="10" y="150" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-42" target="53LsgOam5NlkxpQHniR8-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-42" value="Экспорт артефактов проекта (сериализованные модели, JSON-отчёт метрик, PNG-графики)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="380" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="53LsgOam5NlkxpQHniR8-44" target="53LsgOam5NlkxpQHniR8-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-44" value="Готовность к примению&lt;div&gt;(Batch-скоринг / Интеграция в API)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="450" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-46" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="595" y="520" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53LsgOam5NlkxpQHniR8-47" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="600" y="525" width="20" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,58 @@
+@startuml
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam linetype ortho
+
+skinparam activity {
+    BackgroundColor #F0F4F8
+    BorderColor #2C3E50
+    ArrowColor #2C3E50
+    FontSize 11
+    FontName "Segoe UI"
+    Padding 10
+    ArrowPadding 8
+}
+skinparam note {
+    BackgroundColor #FEF9E7
+    BorderColor #D4AC0D
+    FontSize 10
+    Padding 6
+    Margin 12
+}
+
+start
+
+:Загрузка исходных данных\n(online_shoppers_intention.csv);
+note right: 12 330 сессий, 18 признаков\nЦелевая переменная: Revenue
+
+:Валидация и первичная очистка;
+note left: Проверка пропусков, дубликатов,\nсоответствия типов данных
+
+:Разведочный анализ (EDA);
+note right: Распределения, корреляционная матрица,\nанализ сезонности и типа посетителя
+
+:Предобработка и Feature Engineering;
+:One-Hot кодирование\n(Month, VisitorType);
+:Масштабирование числовых признаков\n(StandardScaler);
+:Стратифицированное разделение\n(Train 60% / Val 20% / Test 20%);
+
+partition "Обучение и оптимизация" {
+  :Инициализация моделей\n(LogReg, RandomForest, XGBoost, MLP);
+  :Компенсация дисбаланса классов\n(class_weight / scale_pos_weight);
+  :Перебор гиперпараметров\n(RandomizedSearchCV, 5-fold CV);
+  :Обучение на Train, ранняя остановка на Val;
+}
+
+partition "Оценка и интерпретация" {
+  :Расчёт метрик на отложенной Test-выборке\n(ROC-AUC, PR-AUC, F1, Precision, Recall);
+  :Визуализация ROC/PR кривых\nи Confusion Matrix;
+  :Глобальная и локальная интерпретация\n(SHAP TreeExplainer);
+}
+
+:Экспорт артефактов проекта;
+note left: Сериализованные модели (.pkl/.keras)\nJSON-отчёт метрик, PNG-графики
+
+:Готовность к применению\n(Batch-скоринг / Интеграция в API);
+
+stop
+@enduml

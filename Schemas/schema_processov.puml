@@ -1,0 +1,55 @@
+@startuml
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam linetype ortho
+
+skinparam activity {
+    BackgroundColor #F0F4F8
+    BorderColor #2C3E50
+    ArrowColor #2C3E50
+    FontSize 11
+    FontName "Segoe UI"
+    Padding 10
+    ArrowPadding 8
+}
+skinparam note {
+    BackgroundColor #FEF9E7
+    BorderColor #D4AC0D
+    FontSize 10
+    Padding 6
+    Margin 12
+}
+
+start
+
+:Загрузка подготовленных данных\n(X_train, y_train, X_val, y_val, X_test, y_test);
+note right: Стратифицированное разделение 60/20/20\nМасштабирование числовых признаков
+
+:Инициализация моделей-кандидатов\n(LogReg, RandomForest, XGBoost, MLP);
+note left: Бейзлайн + ансамбли + нейросеть\nФиксация random_state
+
+partition "Обработка дисбаланса и настройка" {
+  :Расчёт весов классов\n(class_weight / scale_pos_weight);
+  :Определение пространства гиперпараметров\nи диапазонов поиска;
+}
+
+partition "Процесс обучения и валидации" {
+  :Запуск RandomizedSearchCV\n(5-fold Stratified CV, scoring=ROC-AUC);
+  note right: Перебор конфигураций на Train,\nвалидация на CV-фолдах
+  :Обучение MLP с EarlyStopping\n(monitor=val_auc, patience=7);
+  note left: Остановка при отсутствии роста\nметрики на валидационной выборке
+  :Фиксация лучших гиперпараметров\nи весов моделей;
+}
+
+partition "Выбор и финальная оценка" {
+  :Прогнозирование на отложенной\nTest-выборке (X_test, y_test);
+  :Расчёт метрик: ROC-AUC, PR-AUC,\nPrecision, Recall, F1;
+  :Сравнение моделей и выбор\nоптимальной конфигурации;
+  note right: Критерий: максимум ROC-AUC/F1\nпри стабильном Precision/Recall
+}
+
+:Экспорт лучшей модели\nи отчёта о метриках;
+note left: Сериализация (.pkl / .keras)\nJSON-отчёт, графики ROC/PR
+
+stop
+@enduml
